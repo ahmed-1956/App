@@ -1,9 +1,13 @@
 const PREFIX = "nahw-al-tagheer:";
 const BACKUP_SUFFIX = ":backup";
-const QUOTES_KEY = "nahw-al-tagheer-quotes";
+const MANAGED_KEYS = new Set([
+  "nahw-al-taghyir-v1",
+  "nahw-al-taghyir-journal-v2",
+  "nahw-al-tagheer-quotes",
+]);
 
 function isManagedKey(key) {
-  return key.startsWith(PREFIX) || key === QUOTES_KEY;
+  return key.startsWith(PREFIX) || MANAGED_KEYS.has(key);
 }
 const FORMAT = "nahw-al-tagheer-backup";
 const VERSION = 1;
