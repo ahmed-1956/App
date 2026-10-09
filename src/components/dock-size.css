@@ -1,0 +1,108 @@
+
+/* Dock sizing refinement — نحو التغيير */
+.dock,
+.bottom-dock,
+.app-dock,
+nav[aria-label*="التنقل"],
+nav[aria-label*="Navigation"] {
+  min-height: 76px;
+  padding: 10px 12px;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+.dock button,
+.bottom-dock button,
+.app-dock button,
+nav[aria-label*="التنقل"] button,
+nav[aria-label*="Navigation"] button {
+  min-width: 60px;
+  min-height: 58px;
+  padding: 8px 10px;
+  gap: 6px;
+  border-radius: 16px;
+}
+
+.dock svg,
+.bottom-dock svg,
+.app-dock svg,
+nav[aria-label*="التنقل"] svg,
+nav[aria-label*="Navigation"] svg {
+  width: 23px;
+  height: 23px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 380px) {
+  .dock,
+  .bottom-dock,
+  .app-dock,
+  nav[aria-label*="التنقل"],
+  nav[aria-label*="Navigation"] {
+    padding: 8px 6px;
+    gap: 4px;
+  }
+
+  .dock button,
+  .bottom-dock button,
+  .app-dock button,
+  nav[aria-label*="التنقل"] button,
+  nav[aria-label*="Navigation"] button {
+    min-width: 0;
+    flex: 1;
+    padding: 7px 4px;
+  }
+}
+
+/* Full-width Dock */
+.dock,
+.bottom-dock,
+.app-dock {
+  width: 100% !important;
+  max-width: none !important;
+  box-sizing: border-box !important;
+  justify-content: space-around !important;
+}
+
+
+/* Dock: nearly full width with small side margins */
+.dock,
+.bottom-dock,
+.app-dock {
+  width: calc(100% - 24px) !important;
+  max-width: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box !important;
+}
+
+
+/* Final navigation fix */
+.dock {
+  background: rgba(255, 255, 255, 0.30) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(170%) !important;
+  backdrop-filter: blur(24px) saturate(170%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.65) !important;
+  border-radius: 22px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.10) !important;
+  overflow: visible !important;
+}
+
+.dock .dock-item {
+  width: auto !important;
+  height: auto !important;
+  min-width: 68px !important;
+  min-height: 58px !important;
+  flex-direction: column !important;
+  gap: 5px !important;
+}
+
+.dock .dock-label {
+  display: block !important;
+  color: inherit !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+  white-space: nowrap !important;
+}
+

@@ -1,0 +1,143 @@
+.dock {
+  position: fixed;
+  bottom: max(16px, env(safe-area-inset-bottom));
+  left: 12px;
+  right: 12px;
+  transform: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 12px 10px;
+  background: rgba(255, 255, 255, 0.68);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 22px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.10);
+  z-index: 1000;
+}
+
+.dock-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 6px 8px;
+  border: none;
+  border-radius: 14px;
+  background: transparent;
+  color: #667085;
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.dock-item.is-active {
+  color: #2563eb;
+  background: rgba(239, 246, 255, 0.8);
+}
+
+.dock-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dock-item span {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.dock-indicator {
+  position: absolute;
+  bottom: -3px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #2563eb;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dock-item {
+    transition: none;
+  }
+}
+
+/* Glass navigation dock */
+.dock {
+  background: rgba(255, 255, 255, 0.22) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(160%) !important;
+  backdrop-filter: blur(20px) saturate(160%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.45) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.14),
+              inset 0 1px 0 rgba(255, 255, 255, 0.35) !important;
+}
+
+/* Navigation text only */
+.dock .dock-item > span:not(.dock-icon):not(.dock-indicator) {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+}
+
+
+.dock {
+  background: rgba(255, 255, 255, 0.22) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(160%) !important;
+  backdrop-filter: blur(20px) saturate(160%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.14),
+              inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+}
+
+.dock .dock-item {
+  flex-direction: column !important;
+  gap: 5px;
+}
+
+.dock .dock-label {
+  display: block;
+  font-size: 14px !important;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+
+
+/* Final dock layout */
+.dock {
+  left: 12px !important;
+  right: 12px !important;
+  bottom: max(16px, env(safe-area-inset-bottom)) !important;
+  transform: none !important;
+  width: auto !important;
+  justify-content: space-around !important;
+  background: rgba(255, 255, 255, 0.22) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(160%) !important;
+  backdrop-filter: blur(20px) saturate(160%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+}
+
+.dock .dock-item {
+  width: auto !important;
+  height: auto !important;
+  min-width: 64px;
+  min-height: 58px;
+  flex-direction: column !important;
+  gap: 5px;
+}
+
+.dock .dock-label {
+  display: block !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+  white-space: nowrap !important;
+}

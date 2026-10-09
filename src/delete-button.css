@@ -1,0 +1,51 @@
+
+button[aria-label^="حذف"] {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate;
+  border: 1px solid transparent !important;
+  border-radius: 8px !important;
+  padding: 6px 10px !important;
+  transition: color .2s ease, background .25s ease,
+    border-color .25s ease, box-shadow .25s ease,
+    transform .15s ease !important;
+}
+
+button[aria-label^="حذف"]::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #fee2e2, #fca5a5);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .3s ease;
+  pointer-events: none;
+}
+
+button[aria-label^="حذف"]:hover,
+button[aria-label^="حذف"]:focus-visible {
+  color: #dc2626 !important;
+  background: #fef2f2 !important;
+  border-color: #fecaca !important;
+  box-shadow: 0 0 12px rgba(239, 68, 68, .2) !important;
+}
+
+button[aria-label^="حذف"]:hover::before {
+  transform: scaleX(1);
+}
+
+button[aria-label^="حذف"]:active {
+  color: #b91c1c !important;
+  background: #fee2e2 !important;
+  transform: scale(.96);
+  box-shadow: 0 0 16px rgba(239, 68, 68, .3) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  button[aria-label^="حذف"],
+  button[aria-label^="حذف"]::before {
+    transition: none !important;
+  }
+}
