@@ -1,0 +1,8 @@
+{
+  "appId": "com.nahw.taghyir",
+  "appName": "نحو التغيير",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  }
+}
